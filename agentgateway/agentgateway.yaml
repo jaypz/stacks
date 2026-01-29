@@ -9,19 +9,21 @@ spec:
     - repoURL: ghcr.io/kgateway-dev/charts
       chart: agentgateway-crds
       targetRevision: v2.2.0-main
-      valuesObject:
-        controller:
-          image:
-            pullPolicy: "Always"
+      helm:
+        valuesObject:
+          controller:
+            image:
+              pullPolicy: "Always"
     - repoURL: ghcr.io/kgateway-dev/charts
       chart: agentgateway
       targetRevision: v2.2.0-main
-      valuesObject:
-        controller:
-          image:
-            pullPolicy: "Always"
-          extraEnv:
-            KGW_ENABLE_GATEWAY_API_EXPERIMENTAL_FEATURES: true
+      helm:
+        valuesObject:
+          controller:
+            image:
+              pullPolicy: "Always"
+            extraEnv:
+              KGW_ENABLE_GATEWAY_API_EXPERIMENTAL_FEATURES: true
     - repoURL: 'https://github.com/kubernetes-sigs/gateway-api/'
       targetRevision: v1.4.0
       path: ./config/crd
