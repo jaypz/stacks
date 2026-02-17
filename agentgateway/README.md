@@ -10,7 +10,7 @@ Use the following command to deploy agentgateway using `idpbuilder`:
 
 ## What is installed?
  - Gateway API
- - agentgateway CRDS
+ - agentgateway CRDs
  - agentgateway Control Plane
 
 
